@@ -5,6 +5,7 @@ export function updateApiKey(input) {
         const messageElement = document.getElementById('message');
         if (messageElement) {
             messageElement.textContent = 'API key saved!';
+            console.log(messageElement.textContent);
         }
     });
 }
