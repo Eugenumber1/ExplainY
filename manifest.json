@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "ExplainY",
+    "version": "1.0",
+    "description": "Explain highlighted text using ChatGPT.",
+    "host_permissions": ["https://*.openai.com/"],
+    "permissions": ["contextMenus", "activeTab", "storage", "nativeMessaging"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": { 
+      "default_popup": "popup.html",
+      "default_title": "ExplainY"
+    },
+    "content_scripts": [
+      {
+          "matches": ["http://*/*", "https://*/*"],
+          "js": ["contentScript.js"]
+      }
+  ]
+  }
+  
